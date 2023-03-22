@@ -17,7 +17,10 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
+            <li v-for="link in links" class="nav-item active">
+                <a class="nav-link" href="#">{{ link }}</a>
+              </li>
+            <!-- <li class="nav-item active">
               <a class="nav-link" href="#">{{ links[0] }}</a>
             </li>
             <li class="nav-item">
@@ -25,7 +28,7 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">{{ links[2] }}g</a>
-            </li>
+            </li> -->
           </ul>
           <span class="navbar-text">
             Navbar text with an inline element
@@ -44,7 +47,8 @@
            
             data() {
                 return{
-                    links: ['Home', 'About', 'Contact']
+                    links: ['Home', 'About', 'Contact'],
+                    hrefs: ['/#', '/#about', '/#contact']
                 }
             }
         }).mount('nav')
