@@ -18,7 +18,8 @@
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav mr-auto">
             <li v-for="link in links" class="nav-item active">
-                <a class="nav-link" href="#">{{ link }}</a>
+                <a class="nav-link" v-bind:href="link.url"
+                >{{ link.text }}</a>
               </li>
             <!-- <li class="nav-item active">
               <a class="nav-link" href="#">{{ links[0] }}</a>
@@ -44,12 +45,14 @@
 
     <script>
         Vue.createApp({
-           
             data() {
-                return{
-                    links: ['Home', 'About', 'Contact'],
-                    hrefs: ['/#', '/#about', '/#contact']
-                }
+                return {
+                    links: [
+                        {text: "Home", url: 'home.html'},
+                        {text: "About", url: 'about.html'},
+                        {text: "Contact", url: 'contact.html'}
+                    ]
+                };
             }
         }).mount('nav')
 
