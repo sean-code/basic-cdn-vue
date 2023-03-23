@@ -21,6 +21,7 @@
                 <a class="nav-link"
                 :href="page.link.url"
                 :title="`This Link Goes To ${page.text}`"
+                @click="activePage=index"
                 >{{ page.link.text }}</a>
               </li>
             <!-- <li class="nav-item active">
@@ -33,15 +34,12 @@
               <a class="nav-link" href="#">{{ links[2] }}g</a>
             </li> -->
           </ul>
-          <span class="navbar-text">
-            Navbar text with an inline element
-          </span>
         </div>
       </nav>
 
     <div id='content' class="container">
-        <h1>{{ pageTitle }}</h1>
-        <p>{{ paragraph }}</p>
+        <h1>{{ pages[activePage].pageTitle }}</h1>
+        <p>{{ pages[activePage].paragraph }}</p>
     </div>
 
 
@@ -50,6 +48,7 @@
         Vue.createApp({
             data() {
                 return {
+                    activePage: 0,
                     pages: [
                         {
                             link: {text: "Home", url: 'index.html'},
