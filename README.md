@@ -1,4 +1,4 @@
-# cdn-vue-roadmap
+# Vue CDN Roadmap
 
 Creating Toggle Functionality Using Vue Library via CDN:
 * To understand vue syntax
