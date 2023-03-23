@@ -17,11 +17,11 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav mr-auto">
-            <li v-for="(link, index) in links" class="nav-item active" :key="index">
+            <li v-for="(page, index) in pages" class="nav-item active" :key="index">
                 <a class="nav-link"
-                :href="link.url"
-                :title="`This Link Goes To ${link.text}`"
-                >{{ link.text }}</a>
+                :href="page.link.url"
+                :title="`This Link Goes To ${page.text}`"
+                >{{ page.link.text }}</a>
               </li>
             <!-- <li class="nav-item active">
               <a class="nav-link" href="#">{{ links[0] }}</a>
@@ -49,14 +49,24 @@
 
         Vue.createApp({
             data() {
-                return{
-                    links: [
-                        {text: "Home", url: 'index.html'},
-                        {text: "About", url: 'about.html'},
-                        {text: "Contact", url: 'contact.html'}
+                return {
+                    pages: [
+                        {
+                            link: {text: "Home", url: 'index.html'},
+                            pageTitle: 'Home page!',
+                            paragraph: 'This is the Home page of Vue'
+                        },
+                        {
+                            link: {text: "About", url: 'about.html'},
+                            pageTitle: 'About page!',
+                            paragraph: 'This is the About Page of Vue'
+                        },
+                        {
+                            link: {text: "Contact", url: 'contact.html'},
+                            pageTitle: 'Contact page!',
+                            paragraph: 'This is the Contact Page'
+                        }
                     ],
-                    pageTitle: 'Hello Vue!',
-                    paragraph: 'Welcome to the wonderful world of Vue'
                 };
             }
         }).mount('body')
