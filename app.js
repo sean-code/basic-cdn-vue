@@ -1,9 +1,11 @@
 
-Vue.createApp({
+const app = Vue.createApp({
     data() {
         return {
             activePage: 0,
             theme: 'dark',
+            heading: "The Final Empire",
+            author: "Terrence Howard",
             pages: [
                 {
                     link: {text: "Home", url: 'index.html'},
@@ -28,4 +30,17 @@ Vue.createApp({
             this.theme = this.theme === 'light' ? 'dark' : 'light';
             }
     }
-}).mount('body')
+})
+
+app.mount('body')
+
+// const app2 = Vue.createApp({
+//     // template:'<h2>Section 2</h2>'
+//     data() {
+//         return{
+//          heading: "The Final Empire",
+
+//         }
+//     }
+// })
+// app2.mount('#section2')
