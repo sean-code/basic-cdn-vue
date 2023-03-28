@@ -10,6 +10,20 @@
 
 </head>
 <style>
+    body{
+        background-color: #ddd;
+    }
+    .container, .section2{
+        max-width: 960px;
+        margin: 20px auto;
+    }
+    .fav{
+        color: red;
+    }
+     .for-loop{
+        margin: 0;
+        padding: 0;
+    }
     img{
         width:400px;
         height: 600px;
@@ -18,7 +32,7 @@
         padding: 100px 0;
         width: 400px;
         text-align: center;
-        background-color: #ddd;
+        background-color: rgba(116, 4, 4, 0.333);
         margin: 20px;
         display: inline-block;
     }
@@ -76,13 +90,15 @@
                     Change Title
                 </button>
             </div>
+           
 
             <!-- For Loop -->
             <div>
-                <ul>
-                    <li v-for="movie in movies">
+                <ul class="for-loop">
+                    <li v-for="movie in movies"  v-bind:class="{ fav: movie.isFav }"
+                    >
                         <h3>{{ movie.movieTitle }}</h3>
-                        <img :src="movie.poster" />
+                        <img :src="movie.poster" alt="{{ movie.movieTitle }}" />
                         <h4>{{ movie.mainCharacter }}</h4>
                     </li>
                 </ul>

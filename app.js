@@ -12,9 +12,9 @@ const app = Vue.createApp({
             y: 0,
             url: "https://github.com/sean-code",
             movies: [
-                {movieTitle: 'Mayor of Kingstown', mainCharacter:'Jeremy Rener', poster:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTShwJkdxVuzPPEeruvkZCM_mEe2rkaSG91j5sQ0bs4hceKEB38'},
-                {movieTitle:'Yellowstone', mainCharacter: 'Kevin Costner', poster:'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQInNjxD2YfMvSzf2yTrxwzH7ryo5qNevL4MCjOaXmL_YIxN28L'},
-                {movieTitle: 'Tulsa King', mainCharacter:'Sylvester Stallone', poster:'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRc2-u9RoWRtzt2Y7wqA5hyMu4fRJOVTiI74H_4e-ARbyP-DpMH'}
+                {movieTitle: 'Mayor of Kingstown', mainCharacter:'Jeremy Rener', poster:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTShwJkdxVuzPPEeruvkZCM_mEe2rkaSG91j5sQ0bs4hceKEB38', isFav: true},
+                {movieTitle:'Yellowstone', mainCharacter: 'Kevin Costner', poster:'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQInNjxD2YfMvSzf2yTrxwzH7ryo5qNevL4MCjOaXmL_YIxN28L', isFav: true},
+                {movieTitle: 'Tulsa King', mainCharacter:'Sylvester Stallone', poster:'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRc2-u9RoWRtzt2Y7wqA5hyMu4fRJOVTiI74H_4e-ARbyP-DpMH', isFav: false}
             ],
             pages: [
                 {
