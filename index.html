@@ -60,8 +60,10 @@
         </div>
         <button @click="toggleShowMovies">
             <span v-if="showMovies">Hide Movies</span>
-            <span v-if="!showMovies">Show Movies</span>
+            <!-- <span v-if="!showMovies">Show Movies</span> -->
+            <span v-else>Show Movies</span>
         </button>
+        <div v-show="showMovies"><b>Currently Showing Movies</b></div>
     </div>
 
 
