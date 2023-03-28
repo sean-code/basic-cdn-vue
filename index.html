@@ -45,12 +45,17 @@
         <!-- <h1>Hey there</h1> -->
         <p>{{ heading }}</p>
         <p>{{ author }} - {{ age }}</p>
-        <button v-on:click="age++">
+        <button @click="age++">
             Increase Age
         </button>
-        <button v-on:click="age--">
+        <button @click="age--">
             Decrease Age
         </button>
+        <div>
+            <button @click="changeHeading('Money Hustle and Flow')">
+                Change Title
+            </button>
+        </div>
     </div>
 
 

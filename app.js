@@ -29,7 +29,12 @@ const app = Vue.createApp({
     methods: {
         changeTheme() {
             this.theme = this.theme === 'light' ? 'dark' : 'light';
-            }
+            },
+        changeHeading(heading){
+            // console.log("You Clicked Me")
+            // this.heading = "The Hustle"
+            this.heading = heading
+        }
     }
 })
 
