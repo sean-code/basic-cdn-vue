@@ -10,6 +10,7 @@ const app = Vue.createApp({
             showMovies: true,
             x: 0,
             y: 0,
+            url: "https://github.com/sean-code",
             movies: [
                 {movieTitle: 'Mayor of Kingstown', mainCharacter:'Jeremy Rener', poster:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTShwJkdxVuzPPEeruvkZCM_mEe2rkaSG91j5sQ0bs4hceKEB38'},
                 {movieTitle:'Yellowstone', mainCharacter: 'Kevin Costner', poster:'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQInNjxD2YfMvSzf2yTrxwzH7ryo5qNevL4MCjOaXmL_YIxN28L'},
