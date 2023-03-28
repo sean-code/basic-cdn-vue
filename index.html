@@ -10,6 +10,10 @@
 
 </head>
 <style>
+    img{
+        width:400px;
+        height: 600px;
+    }
     .box{
         padding: 100px 0;
         width: 400px;
@@ -17,6 +21,9 @@
         background-color: #ddd;
         margin: 20px;
         display: inline-block;
+    }
+    #mouse-events{
+        text-align: center;
     }
 </style>
 <body>
@@ -69,6 +76,17 @@
                     Change Title
                 </button>
             </div>
+
+            <!-- For Loop -->
+            <div>
+                <ul>
+                    <li v-for="movie in movies">
+                        <h3>{{ movie.movieTitle }}</h3>
+                        <img :src="movie.poster" />
+                        <h4>{{ movie.mainCharacter }}</h4>
+                    </li>
+                </ul>
+            </div>
         </div>
                 <!-- Conditional Rendering -->
         <button @click="toggleShowMovies">
@@ -80,10 +98,13 @@
     </div>
 
     <!-- Mouse events -->
+    <h2 id="mouse-events">Mouse Events</h2>
     <div id='over' class="box" @mouseover="handleEvent($event, 5)">Mouse Over (enter)</div>
     <div class="box" @mouseleave="handleEvent">Mouse Leave</div>
     <div class="box" @dblclick="handleEvent" >Double Click</div>
     <div class="box" @mousemove="handleMouseMove">Position - {{ x }} - {{ y }}</div>
+
+   
     <script src="app.js"></script>
 </body>
 </html>
