@@ -7,6 +7,7 @@ const app = Vue.createApp({
             heading: "The Final Empire",
             author: "Terrence Howard",
             age: "47",
+            showMovies: true,
             pages: [
                 {
                     link: {text: "Home", url: 'index.html'},
@@ -34,6 +35,9 @@ const app = Vue.createApp({
             // console.log("You Clicked Me")
             // this.heading = "The Hustle"
             this.heading = heading
+        },
+        toggleShowMovies(){
+            this.showMovies=!this.showMovies
         }
     }
 })

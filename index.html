@@ -43,19 +43,25 @@
 
     <div id="section2">
         <!-- <h1>Hey there</h1> -->
-        <p>{{ heading }}</p>
-        <p>{{ author }} - {{ age }}</p>
-        <button @click="age++">
-            Increase Age
-        </button>
-        <button @click="age--">
-            Decrease Age
-        </button>
-        <div>
-            <button @click="changeHeading('Money Hustle and Flow')">
-                Change Title
+        <div v-if="showMovies">
+            <p>{{ heading }}</p>
+            <p>{{ author }} - {{ age }}</p>
+            <button @click="age++">
+                Increase Age
             </button>
+            <button @click="age--">
+                Decrease Age
+            </button>
+            <div>
+                <button @click="changeHeading('Money Hustle and Flow')">
+                    Change Title
+                </button>
+            </div>
         </div>
+        <button @click="toggleShowMovies">
+            <span v-if="showMovies">Hide Movies</span>
+            <span v-if="!showMovies">Show Movies</span>
+        </button>
     </div>
 
 
