@@ -43,6 +43,8 @@
 
     <div id="section2">
         <!-- <h1>Hey there</h1> -->
+
+            <!-- Dynamically display content, onClick Events -->
         <div v-if="showMovies">
             <p>{{ heading }}</p>
             <p>{{ author }} - {{ age }}</p>
@@ -58,6 +60,7 @@
                 </button>
             </div>
         </div>
+                <!-- Conditional Rendering -->
         <button @click="toggleShowMovies">
             <span v-if="showMovies">Hide Movies</span>
             <!-- <span v-if="!showMovies">Show Movies</span> -->
