@@ -9,6 +9,16 @@
     <script src="https://unpkg.com/vue@3.0.2"></script>
 
 </head>
+<style>
+    .box{
+        padding: 100px 0;
+        width: 400px;
+        text-align: center;
+        background-color: #ddd;
+        margin: 20px;
+        display: inline-block;
+    }
+</style>
 <body>
     <nav 
         :class="[`navbar-${theme}`, `bg-${theme}`, 'navbar', 'navbar-expand-lg']">
@@ -69,7 +79,11 @@
         <div v-show="showMovies"><b>Currently Showing Movies</b></div>
     </div>
 
-
+    <!-- Mouse events -->
+    <div id='over' class="box" @mouseover="handleEvent($event, 5)">Mouse Over (enter)</div>
+    <div class="box" @mouseleave="handleEvent">Mouse Leave</div>
+    <div class="box" @dblclick="handleEvent" >Double Click</div>
+    <div class="box" @mousemove="handleMouseMove">Position - {{ x }} - {{ y }}</div>
     <script src="app.js"></script>
 </body>
 </html>

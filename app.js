@@ -8,6 +8,8 @@ const app = Vue.createApp({
             author: "Terrence Howard",
             age: "47",
             showMovies: true,
+            x: 0,
+            y: 0,
             pages: [
                 {
                     link: {text: "Home", url: 'index.html'},
@@ -38,6 +40,19 @@ const app = Vue.createApp({
         },
         toggleShowMovies(){
             this.showMovies=!this.showMovies
+        },
+        handleEvent(e, data){
+            console.log(e, e.type)
+            if (data) {
+                console.log(data)
+            }else{
+                console.log("No Second Argument")
+            }
+        },
+        handleMouseMove(e){
+            // console.log("Handle Mouse Move")
+            this.x = e.offsetX
+            this.y = e.offsetY
         }
     }
 })
