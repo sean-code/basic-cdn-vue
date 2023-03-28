@@ -44,7 +44,13 @@
     <div id="section2">
         <!-- <h1>Hey there</h1> -->
         <p>{{ heading }}</p>
-        <span>{{ author }}</span>
+        <p>{{ author }} - {{ age }}</p>
+        <button v-on:click="age++">
+            Increase Age
+        </button>
+        <button v-on:click="age--">
+            Decrease Age
+        </button>
     </div>
 
 

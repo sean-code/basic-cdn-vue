@@ -6,6 +6,7 @@ const app = Vue.createApp({
             theme: 'dark',
             heading: "The Final Empire",
             author: "Terrence Howard",
+            age: "47",
             pages: [
                 {
                     link: {text: "Home", url: 'index.html'},
