@@ -101,7 +101,7 @@
                 <ul class="for-loop">
                     <li v-for="movie in movies"  v-bind:class="{ fav: movie.isFav }"
                     >
-                        <h3>{{ movie.movieTitle }}</h3>
+                        <h3 @click="toggleColor(movie)">{{ movie.movieTitle }}</h3>
                         <img :src="movie.poster" alt="{{ movie.movieTitle }}" />
                         <h4>{{ movie.mainCharacter }}</h4>
                     </li>

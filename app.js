@@ -47,6 +47,10 @@ const app = Vue.createApp({
         toggleShowMovies(){
             this.showMovies=!this.showMovies
         },
+        toggleColor(movie){
+            // console.log("Toggled Color")
+            movie.isFav = !movie.isFav
+        },
         handleEvent(e, data){
             console.log(e, e.type)
             if (data) {
